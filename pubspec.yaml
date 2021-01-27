@@ -11,7 +11,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  intl: ^0.16.1
   rxdart: ^0.25.0
   linked_scroll_controller: ^0.1.2
   pluto_filtered_list: ^0.1.0
