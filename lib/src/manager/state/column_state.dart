@@ -67,7 +67,7 @@ abstract class IColumnState {
   void toggleFrozenColumn(Key columnKey, PlutoColumnFrozen frozen);
 
   /// Toggle column sorting.
-  void toggleSortColumn(Key columnKey);
+  void toggleSortColumn(Key columnKey, {PlutoColumnSorter sorter});
 
   /// Column width to index location based on full column.
   double columnsWidthAtColumnIdx(int columnIdx);
@@ -246,23 +246,33 @@ mixin ColumnState implements IPlutoGridState {
     notifyListeners();
   }
 
-  void toggleSortColumn(Key columnKey) {
+  void toggleSortColumn(Key columnKey, {PlutoColumnSorter sorter}) {
     for (var i = 0; i < refColumns.length; i += 1) {
       PlutoColumn column = refColumns[i];
 
       if (column.key == columnKey) {
         if (column.sort.isNone) {
           column.sort = PlutoColumnSort.ascending;
-
-          sortAscending(column);
         } else if (column.sort.isAscending) {
           column.sort = PlutoColumnSort.descending;
-
-          sortDescending(column);
         } else {
           column.sort = PlutoColumnSort.none;
-
-          sortBySortIdx();
+        }
+        //其他置none
+        if (sorter != null) {
+          sorter(column);
+          break;
+        }
+        switch (column.sort) {
+          case PlutoColumnSort.none:
+            sortBySortIdx();
+            break;
+          case PlutoColumnSort.ascending:
+            sortAscending(column);
+            break;
+          case PlutoColumnSort.descending:
+            sortDescending(column);
+            break;
         }
       } else {
         column.sort = PlutoColumnSort.none;

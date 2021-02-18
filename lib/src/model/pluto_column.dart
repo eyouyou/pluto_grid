@@ -6,6 +6,8 @@ typedef PlutoColumnValueFormatter = String Function(dynamic value);
 typedef PlutoColumnRenderer = Widget Function(
     PlutoColumnRendererContext rendererContext);
 
+typedef PlutoColumnSorter = void Function(PlutoColumn col);
+
 class PlutoColumn {
   /// A title to be displayed on the screen.
   String title;
@@ -53,6 +55,8 @@ class PlutoColumn {
   /// Sort rows by tapping on the column heading.
   bool enableSorting;
 
+  PlutoColumnSorter sorter;
+
   /// Displays the right icon of the column title.
   bool enableContextMenu;
 
@@ -90,6 +94,7 @@ class PlutoColumn {
     this.enableRowDrag = false,
     this.enableRowChecked = false,
     this.enableSorting = true,
+    this.sorter,
     this.enableContextMenu = true,
     this.enableFilterMenuItem = true,
     this.enableHideColumnMenuItem = true,

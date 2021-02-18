@@ -227,7 +227,7 @@ class _BuildSortableWidget extends StatelessWidget {
     return column.enableSorting
         ? InkWell(
             onTap: () {
-              stateManager.toggleSortColumn(column.key);
+              stateManager.toggleSortColumn(column.key, sorter: column.sorter);
             },
             child: child,
           )
