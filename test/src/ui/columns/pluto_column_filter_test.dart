@@ -101,7 +101,6 @@ void main() {
           title: 'column title',
           field: 'column_field_name',
           type: PlutoColumnType.text(),
-          enableFilterMenuItem: false,
         );
 
         // when
@@ -134,7 +133,6 @@ void main() {
           title: 'column title',
           field: 'column_field_name',
           type: PlutoColumnType.text(),
-          enableFilterMenuItem: true,
         );
 
         when(stateManager.filterRowsByField(any)).thenReturn([
@@ -178,7 +176,6 @@ void main() {
           title: 'column title',
           field: 'column_field_name',
           type: PlutoColumnType.text(),
-          enableFilterMenuItem: true,
         );
 
         when(stateManager.filterRowsByField(any)).thenReturn([
@@ -219,7 +216,6 @@ void main() {
           title: 'column title',
           field: 'column_field_name',
           type: PlutoColumnType.text(),
-          enableFilterMenuItem: true,
         );
 
         when(stateManager.filterRowsByField('column_field_name')).thenReturn([

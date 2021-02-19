@@ -385,7 +385,7 @@ class FilterPopupState {
           configuration.localeText.filterAllColumns,
     };
 
-    columns.where((element) => element.enableFilterMenuItem).forEach((element) {
+    columns.where((element) => false).forEach((element) {
       columnMap[element.field] = element.title;
     });
 
@@ -406,7 +406,6 @@ class FilterPopupState {
         title: configuration.localeText.filterColumn,
         field: FilterHelper.filterFieldColumn,
         type: PlutoColumnType.select(columnMap.keys.toList(growable: false)),
-        enableFilterMenuItem: false,
         applyFormatterInEditing: true,
         formatter: (dynamic value) {
           return columnMap[value] ?? '';
@@ -416,7 +415,6 @@ class FilterPopupState {
         title: configuration.localeText.filterType,
         field: FilterHelper.filterFieldType,
         type: PlutoColumnType.select(configuration.columnFilterConfig.filters),
-        enableFilterMenuItem: false,
         applyFormatterInEditing: true,
         formatter: (dynamic value) {
           return value?.title ?? '';
@@ -426,7 +424,6 @@ class FilterPopupState {
         title: configuration.localeText.filterValue,
         field: FilterHelper.filterFieldValue,
         type: PlutoColumnType.text(),
-        enableFilterMenuItem: false,
       ),
     ];
   }

@@ -57,7 +57,7 @@ mixin FilteringRowState implements IPlutoGridState {
     setFilterRows(rows);
 
     var enabledFilterColumnFields =
-        refColumns.where((element) => element.enableFilterMenuItem).toList();
+        refColumns.where((element) => false).toList();
 
     setFilter(
       FilterHelper.convertRowsToFilter(_filterRows, enabledFilterColumnFields),

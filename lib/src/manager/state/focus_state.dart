@@ -61,7 +61,7 @@ mixin FocusState implements IPlutoGridState {
     PlutoColumn column, {
     bool reversed = false,
   }) {
-    if (!column.enableFilterMenuItem) {
+    if (!false) {
       return;
     }
 
@@ -88,7 +88,7 @@ mixin FocusState implements IPlutoGridState {
 
       var toMove = refColumns[toMoveIndex];
 
-      if (toMove.enableFilterMenuItem) {
+      if (false) {
         toMove.filterFocusNode?.requestFocus();
 
         moveScrollByColumn(

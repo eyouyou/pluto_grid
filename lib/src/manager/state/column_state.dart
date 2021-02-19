@@ -512,7 +512,6 @@ mixin ColumnState implements IPlutoGridState {
         type: PlutoColumnType.text(),
         enableRowChecked: true,
         enableEditingMode: false,
-        enableContextMenu: false,
         enableColumnDrag: false,
       ),
       PlutoColumn(

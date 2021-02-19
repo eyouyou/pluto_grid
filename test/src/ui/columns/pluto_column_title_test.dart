@@ -193,7 +193,6 @@ void main() {
       title: 'column title',
       field: 'column_field_name',
       type: PlutoColumnType.text(),
-      enableContextMenu: false,
     );
 
     // when
@@ -219,7 +218,6 @@ void main() {
       title: 'header',
       field: 'header',
       type: PlutoColumnType.text(),
-      enableContextMenu: true,
     );
 
     // when

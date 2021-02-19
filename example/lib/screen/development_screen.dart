@@ -118,7 +118,6 @@ class _DevelopmentScreenState extends State<DevelopmentScreen> {
         title: 'column6',
         field: 'column6',
         type: PlutoColumnType.text(),
-        enableFilterMenuItem: false,
         enableEditingMode: false,
         renderer: (rendererContext) {
           return Image.asset('assets/images/cat.jpg');

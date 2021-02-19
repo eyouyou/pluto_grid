@@ -86,7 +86,7 @@ abstract class _PlutoColumnFilterStateWithChange
 
       enabled = update<bool>(
         enabled,
-        widget.column.enableFilterMenuItem && !hasCompositeFilter,
+        false && !hasCompositeFilter,
       );
     });
   }

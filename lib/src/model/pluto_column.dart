@@ -57,20 +57,20 @@ class PlutoColumn {
 
   PlutoColumnSorter sorter;
 
-  /// Displays the right icon of the column title.
-  bool enableContextMenu;
+  // /// Displays the right icon of the column title.
+  // bool enableContextMenu;
 
-  /// Displays filter-related menus in the column context menu.
-  /// Valid only when [enableContextMenu] is activated.
-  bool enableFilterMenuItem;
+  // /// Displays filter-related menus in the column context menu.
+  // /// Valid only when [enableContextMenu] is activated.
+  // bool enableFilterMenuItem;
 
-  /// Displays Hide column menu in the column context menu.
-  /// Valid only when [enableContextMenu] is activated.
-  bool enableHideColumnMenuItem;
+  // /// Displays Hide column menu in the column context menu.
+  // /// Valid only when [enableContextMenu] is activated.
+  // bool enableHideColumnMenuItem;
 
-  /// Displays Set columns menu in the column context menu.
-  /// Valid only when [enableContextMenu] is activated.
-  bool enableSetColumnsMenuItem;
+  // /// Displays Set columns menu in the column context menu.
+  // /// Valid only when [enableContextMenu] is activated.
+  // bool enableSetColumnsMenuItem;
 
   /// Entering the Enter key or tapping the cell enters the Editing mode.
   bool enableEditingMode;
@@ -95,10 +95,6 @@ class PlutoColumn {
     this.enableRowChecked = false,
     this.enableSorting = true,
     this.sorter,
-    this.enableContextMenu = true,
-    this.enableFilterMenuItem = true,
-    this.enableHideColumnMenuItem = true,
-    this.enableSetColumnsMenuItem = true,
     this.enableEditingMode = true,
     this.hide = false,
   }) : _key = UniqueKey();
@@ -157,6 +153,34 @@ class PlutoColumn {
 
     return value.toString();
   }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) {
+      return true;
+    }
+
+    return other is PlutoColumn &&
+        field == other.field &&
+        title == other.title &&
+        type == other.type &&
+        textAlign == other.textAlign &&
+        frozen == other.frozen &&
+        sort == other.sort &&
+        formatter == other.formatter &&
+        applyFormatterInEditing == other.applyFormatterInEditing &&
+        renderer == other.renderer &&
+        enableColumnDrag == other.enableColumnDrag &&
+        enableRowDrag == other.enableRowDrag &&
+        enableRowChecked == other.enableRowChecked &&
+        enableSorting == other.enableSorting &&
+        sorter == other.sorter &&
+        enableEditingMode == other.enableEditingMode &&
+        hide == other.hide;
+  }
+
+  @override
+  int get hashCode => field.hashCode;
 }
 
 class PlutoColumnRendererContext {

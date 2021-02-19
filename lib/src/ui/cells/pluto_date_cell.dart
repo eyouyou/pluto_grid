@@ -149,7 +149,6 @@ class _PlutoDateCellState extends State<PlutoDateCell>
         width: 45,
         enableColumnDrag: false,
         enableSorting: false,
-        enableContextMenu: false,
         formatter: (dynamic value) {
           if (value == null || value.toString().isEmpty) {
             return '';

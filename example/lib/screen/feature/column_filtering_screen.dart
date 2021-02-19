@@ -41,7 +41,6 @@ class _ColumnFilteringScreenState extends State<ColumnFilteringScreen> {
         title: 'Disable',
         field: 'disable',
         type: PlutoColumnType.text(),
-        enableFilterMenuItem: false,
       ),
       PlutoColumn(
         title: 'Select',
