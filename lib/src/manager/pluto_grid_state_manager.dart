@@ -267,6 +267,7 @@ class _ApplyCellForSetColumn implements _Apply {
 
   void execute(PlutoRow row) {
     refColumns.forEach((element) {
+      assert(row.cells[element.field] != null);
       row.cells[element.field].setColumn(element);
     });
   }
