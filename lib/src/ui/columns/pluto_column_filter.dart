@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:pluto_grid/pluto_grid.dart';
 
 class PlutoColumnFilter extends PlutoStatefulWidget {
-  final PlutoGridStateManager stateManager;
+  final PlutoGridController stateManager;
   final PlutoColumn column;
 
   PlutoColumnFilter({

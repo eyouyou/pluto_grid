@@ -12,7 +12,7 @@ void main() {
 
     List<PlutoRow> rows;
 
-    PlutoGridStateManager stateManager;
+    PlutoGridController stateManager;
 
     final withTenColumns = PlutoWidgetTestHelper(
       '10개의 컬럼을 생성',
@@ -77,7 +77,7 @@ void main() {
 
     List<PlutoRow> rows;
 
-    PlutoGridStateManager stateManager;
+    PlutoGridController stateManager;
 
     final withTenColumns = PlutoWidgetTestHelper(
       '10개의 컬럼을 생성하고 0, 5번 컬럼을 숨김',

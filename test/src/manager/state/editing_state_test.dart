@@ -28,7 +28,7 @@ void main() {
 
       List<PlutoRow> rows = RowHelper.count(10, columns);
 
-      PlutoGridStateManager stateManager = PlutoGridStateManager(
+      PlutoGridController stateManager = PlutoGridController(
         columns: columns,
         rows: rows,
         gridFocusNode: null,
@@ -91,7 +91,7 @@ void main() {
 
       List<PlutoRow> rows = RowHelper.count(10, columns);
 
-      PlutoGridStateManager stateManager = PlutoGridStateManager(
+      PlutoGridController stateManager = PlutoGridController(
         columns: columns,
         rows: rows,
         gridFocusNode: null,
@@ -168,7 +168,7 @@ void main() {
 
       List<PlutoRow> rows = RowHelper.count(10, columns);
 
-      PlutoGridStateManager stateManager = PlutoGridStateManager(
+      PlutoGridController stateManager = PlutoGridController(
         columns: columns,
         rows: rows,
         gridFocusNode: null,
@@ -249,7 +249,7 @@ void main() {
     MockOnChangeListener mock;
     List<PlutoColumn> columns;
     List<PlutoRow> rows;
-    PlutoGridStateManager stateManager;
+    PlutoGridController stateManager;
 
     Function({
       PlutoGridMode mode,
@@ -278,7 +278,7 @@ void main() {
 
         rows = RowHelper.count(10, columns);
 
-        stateManager = PlutoGridStateManager(
+        stateManager = PlutoGridController(
           columns: columns,
           rows: rows,
           gridFocusNode: null,
@@ -409,7 +409,7 @@ void main() {
       () {
         final mock = MockOnChangeListener();
 
-        PlutoGridStateManager stateManager = PlutoGridStateManager(
+        PlutoGridController stateManager = PlutoGridController(
           columns: columns,
           rows: rows,
           gridFocusNode: null,
@@ -442,7 +442,7 @@ void main() {
       () {
         final mock = MockOnChangeListener();
 
-        PlutoGridStateManager stateManager = PlutoGridStateManager(
+        PlutoGridController stateManager = PlutoGridController(
           columns: columns,
           rows: rows,
           gridFocusNode: null,

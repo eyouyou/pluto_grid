@@ -16,7 +16,7 @@ class _DevelopmentScreenState extends State<DevelopmentScreen> {
 
   List<PlutoRow> rows;
 
-  PlutoGridStateManager stateManager;
+  PlutoGridController stateManager;
 
   PlutoGridSelectingMode gridSelectingMode = PlutoGridSelectingMode.row;
 
@@ -175,7 +175,7 @@ class _DevelopmentScreenState extends State<DevelopmentScreen> {
             stateManager.setSelectingMode(gridSelectingMode);
             stateManager.setShowColumnFilter(true);
           },
-          createHeader: (PlutoGridStateManager stateManager) {
+          createHeader: (PlutoGridController stateManager) {
             return SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Container(
@@ -215,7 +215,7 @@ class _DevelopmentScreenState extends State<DevelopmentScreen> {
                     DropdownButtonHideUnderline(
                       child: DropdownButton(
                         value: gridSelectingMode,
-                        items: PlutoGridStateManager.selectingModes
+                        items: PlutoGridController.selectingModes
                             .map<DropdownMenuItem<PlutoGridSelectingMode>>(
                                 (PlutoGridSelectingMode item) {
                           final color =

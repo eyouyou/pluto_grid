@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:linked_scroll_controller/linked_scroll_controller.dart';
+import 'package:pluto_filtered_list/pluto_filtered_list.dart';
 import 'package:pluto_grid/pluto_grid.dart';
 
 typedef PlutoOnLoadedEventCallback = void Function(
@@ -12,10 +13,10 @@ typedef PlutoOnSelectedEventCallback = void Function(
     PlutoGridOnSelectedEvent event);
 
 typedef CreateHeaderCallBack = Widget Function(
-    PlutoGridStateManager stateManager);
+    PlutoGridController stateManager);
 
 typedef CreateFooterCallBack = Widget Function(
-    PlutoGridStateManager stateManager);
+    PlutoGridController stateManager);
 
 class PlutoGrid extends StatefulWidget {
   final List<PlutoColumn> columns;
@@ -42,6 +43,10 @@ class PlutoGrid extends StatefulWidget {
   /// you can receive the selected row and cell from the onSelected callback.
   final PlutoGridMode mode;
 
+  final PlutoGridController controller;
+
+  final PlutoGridScrollController scrollController;
+
   const PlutoGrid({
     Key key,
     @required this.columns,
@@ -52,6 +57,8 @@ class PlutoGrid extends StatefulWidget {
     this.createHeader,
     this.createFooter,
     this.configuration,
+    this.controller,
+    this.scrollController,
     this.mode = PlutoGridMode.normal,
   }) : super(key: key);
 
@@ -66,7 +73,7 @@ class _PlutoGridState extends State<PlutoGrid> {
 
   LinkedScrollControllerGroup horizontalScroll = LinkedScrollControllerGroup();
 
-  PlutoGridStateManager stateManager;
+  PlutoGridController stateManager;
 
   PlutoGridKeyManager keyManager;
 
@@ -119,21 +126,29 @@ class _PlutoGridState extends State<PlutoGrid> {
   }
 
   void initStateManager() {
-    stateManager = PlutoGridStateManager(
-      columns: widget.columns,
-      rows: widget.rows,
-      gridFocusNode: gridFocusNode,
-      scroll: PlutoGridScrollController(
-        vertical: verticalScroll,
-        horizontal: horizontalScroll,
-      ),
-      mode: widget.mode,
-      onChangedEventCallback: widget.onChanged,
-      onSelectedEventCallback: widget.onSelected,
-      createHeader: widget.createHeader,
-      createFooter: widget.createFooter,
-      configuration: widget.configuration,
+    stateManager = widget.controller ?? PlutoGridController();
+
+    stateManager.refColumns = widget.columns;
+    stateManager.refRows = widget.rows;
+
+    if (gridFocusNode != null) stateManager.setGridFocusNode(gridFocusNode);
+    stateManager.setScroll(
+      widget.scrollController ??
+          PlutoGridScrollController(
+            vertical: verticalScroll,
+            horizontal: horizontalScroll,
+          ),
     );
+    if (widget.mode != null) stateManager.setGridMode(widget.mode);
+    if (widget.onChanged != null) stateManager.setOnChanged(widget.onChanged);
+    if (widget.onSelected != null)
+      stateManager.setOnSelected(widget.onSelected);
+    if (widget.createHeader != null)
+      stateManager.setCreateHeader(widget.createHeader);
+    if (widget.createFooter != null)
+      stateManager.setCreateFooter(widget.createFooter);
+    stateManager
+        .setConfiguration(widget.configuration ?? PlutoGridConfiguration());
 
     stateManager.addListener(changeStateListener);
 
@@ -415,7 +430,7 @@ class _PlutoGridState extends State<PlutoGrid> {
 }
 
 class PlutoGridOnLoadedEvent {
-  final PlutoGridStateManager stateManager;
+  final PlutoGridController stateManager;
 
   PlutoGridOnLoadedEvent({
     this.stateManager,

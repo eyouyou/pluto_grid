@@ -8,7 +8,7 @@ import '../../../helper/row_helper.dart';
 
 void main() {
   group('속성 값 테스트.', () {
-    PlutoGridStateManager stateManager;
+    PlutoGridController stateManager;
 
     List<PlutoColumn> columns;
 
@@ -40,7 +40,7 @@ void main() {
 
           rows = RowHelper.count(10, columns);
 
-          stateManager = PlutoGridStateManager(
+          stateManager = PlutoGridController(
             columns: columns,
             rows: rows,
             gridFocusNode: null,

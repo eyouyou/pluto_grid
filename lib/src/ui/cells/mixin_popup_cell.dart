@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pluto_grid/pluto_grid.dart';
 
 abstract class AbstractMixinPopupCell extends StatefulWidget {
-  final PlutoGridStateManager stateManager;
+  final PlutoGridController stateManager;
   final PlutoCell cell;
   final PlutoColumn column;
 
@@ -43,11 +43,11 @@ mixin MixinPopupCell<T extends AbstractMixinPopupCell> on State<T>
   int offsetOfScrollRowIdx = 0;
 
   /// Callback function that returns Header to be inserted at the top of the popup
-  /// Implement a callback function that takes [PlutoGridStateManager] as a parameter.
+  /// Implement a callback function that takes [PlutoGridController] as a parameter.
   CreateHeaderCallBack createHeader;
 
   /// Callback function that returns Footer to be inserted at the bottom of the popup
-  /// Implement a callback function that takes [PlutoGridStateManager] as a parameter.
+  /// Implement a callback function that takes [PlutoGridController] as a parameter.
   CreateFooterCallBack createFooter;
 
   @override

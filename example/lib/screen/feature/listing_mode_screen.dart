@@ -19,7 +19,7 @@ class _ListingModeScreenState extends State<ListingModeScreen> {
 
   List<PlutoRow> rows;
 
-  PlutoGridStateManager stateManager;
+  PlutoGridController stateManager;
 
   StreamSubscription removeKeyboardListener;
 

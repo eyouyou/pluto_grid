@@ -64,8 +64,8 @@ void main() {
   group(
     '그리드간 셀 이동 테스트',
     () {
-      PlutoGridStateManager stateManagerA;
-      PlutoGridStateManager stateManagerB;
+      PlutoGridController stateManagerA;
+      PlutoGridController stateManagerB;
 
       group('왼쪽 그리드의', () {
         final leftGridCellSelected =

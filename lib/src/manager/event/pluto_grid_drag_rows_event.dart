@@ -13,7 +13,7 @@ class PlutoGridDragRowsEvent extends PlutoGridEvent {
     this.rows,
   });
 
-  void handler(PlutoGridStateManager stateManager) {
+  void handler(PlutoGridController stateManager) {
     if (dragType == null ||
         (!dragType.isStart && offset == null) ||
         rows == null) {
@@ -29,18 +29,18 @@ class PlutoGridDragRowsEvent extends PlutoGridEvent {
     }
   }
 
-  void _startDrag(PlutoGridStateManager stateManager) {
+  void _startDrag(PlutoGridController stateManager) {
     stateManager.setIsDraggingRow(true, notify: false);
     stateManager.setDragRows(rows);
   }
 
-  void _updateDrag(PlutoGridStateManager stateManager) {
+  void _updateDrag(PlutoGridController stateManager) {
     stateManager.setDragTargetRowIdx(
       stateManager.getRowIdxByOffset(offset.dy),
     );
   }
 
-  void _endDrag(PlutoGridStateManager stateManager) {
+  void _endDrag(PlutoGridController stateManager) {
     stateManager.moveRows(
       rows,
       offset.dy,

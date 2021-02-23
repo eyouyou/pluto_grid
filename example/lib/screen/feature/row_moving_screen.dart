@@ -17,7 +17,7 @@ class _RowMovingScreenState extends State<RowMovingScreen> {
 
   List<PlutoRow> rows;
 
-  PlutoGridStateManager stateManager;
+  PlutoGridController stateManager;
 
   @override
   void initState() {

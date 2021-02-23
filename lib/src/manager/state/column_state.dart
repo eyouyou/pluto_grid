@@ -109,8 +109,8 @@ mixin ColumnState implements IPlutoGridState {
 
   FilteredList<PlutoColumn> get refColumns => _refColumns;
 
-  set refColumns(FilteredList<PlutoColumn> setColumns) {
-    _refColumns = setColumns;
+  set refColumns(List<PlutoColumn> setColumns) {
+    _refColumns = FilteredList(initialList: setColumns);
     _refColumns.setFilter((element) => element.hide == false);
   }
 
@@ -377,7 +377,6 @@ mixin ColumnState implements IPlutoGridState {
       return;
     }
 
-    // 컬럼의 순서 변경
     refColumns[columnIndex].frozen = refColumns[indexToMove].frozen;
 
     var columnToMove = refColumns[columnIndex];
@@ -534,7 +533,7 @@ mixin ColumnState implements IPlutoGridState {
 
     var rows = refColumns.originalList.map(toRow).toList();
 
-    PlutoGridStateManager stateManager;
+    PlutoGridController stateManager;
 
     var handleLister = () {
       stateManager.refRows.forEach((row) {

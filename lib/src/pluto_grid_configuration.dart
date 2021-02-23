@@ -144,7 +144,7 @@ class PlutoGridConfiguration {
     PlutoFilterTypeLessThanOrEqualTo.name = localeText.filterLessThanOrEqualTo;
   }
 
-  /// Fired when setConfiguration is called in [PlutoGridStateManager]'s constructor.
+  /// Fired when setConfiguration is called in [PlutoGridController]'s constructor.
   void applyColumnFilter(List<PlutoColumn> refColumns) {
     if (refColumns == null || refColumns.isEmpty) {
       return;

@@ -17,7 +17,7 @@ class PlutoGridCellGestureEvent extends PlutoGridEvent {
   });
 
   @override
-  void handler(PlutoGridStateManager stateManager) {
+  void handler(PlutoGridController stateManager) {
     if (gestureType == null ||
         offset == null ||
         cell == null ||
@@ -37,7 +37,7 @@ class PlutoGridCellGestureEvent extends PlutoGridEvent {
     }
   }
 
-  void _onTapUp(PlutoGridStateManager stateManager) {
+  void _onTapUp(PlutoGridController stateManager) {
     if (_setKeepFocusAndCurrentCell(stateManager)) {
       return;
     } else if (stateManager.isSelectingInteraction()) {
@@ -55,7 +55,7 @@ class PlutoGridCellGestureEvent extends PlutoGridEvent {
     }
   }
 
-  void _onLongPressStart(PlutoGridStateManager stateManager) {
+  void _onLongPressStart(PlutoGridController stateManager) {
     _setCurrentCell(stateManager, cell, rowIdx);
 
     stateManager.setSelecting(true);
@@ -65,7 +65,7 @@ class PlutoGridCellGestureEvent extends PlutoGridEvent {
     }
   }
 
-  void _onLongPressMoveUpdate(PlutoGridStateManager stateManager) {
+  void _onLongPressMoveUpdate(PlutoGridController stateManager) {
     _setCurrentCell(stateManager, cell, rowIdx);
 
     stateManager.setCurrentSelectingPositionWithOffset(offset);
@@ -75,13 +75,13 @@ class PlutoGridCellGestureEvent extends PlutoGridEvent {
     ));
   }
 
-  void _onLongPressEnd(PlutoGridStateManager stateManager) {
+  void _onLongPressEnd(PlutoGridController stateManager) {
     _setCurrentCell(stateManager, cell, rowIdx);
 
     stateManager.setSelecting(false);
   }
 
-  bool _setKeepFocusAndCurrentCell(PlutoGridStateManager stateManager) {
+  bool _setKeepFocusAndCurrentCell(PlutoGridController stateManager) {
     if (stateManager.hasFocus) {
       return false;
     }
@@ -91,7 +91,7 @@ class PlutoGridCellGestureEvent extends PlutoGridEvent {
     return stateManager.isCurrentCell(cell);
   }
 
-  void _selecting(PlutoGridStateManager stateManager) {
+  void _selecting(PlutoGridController stateManager) {
     if (stateManager.keyPressed.shift) {
       final int columnIdx = stateManager.columnIndex(column);
 
@@ -106,7 +106,7 @@ class PlutoGridCellGestureEvent extends PlutoGridEvent {
     }
   }
 
-  void _selectMode(PlutoGridStateManager stateManager) {
+  void _selectMode(PlutoGridController stateManager) {
     if (stateManager.isCurrentCell(cell)) {
       stateManager.handleOnSelected();
     } else {
@@ -115,7 +115,7 @@ class PlutoGridCellGestureEvent extends PlutoGridEvent {
   }
 
   void _setCurrentCell(
-    PlutoGridStateManager stateManager,
+    PlutoGridController stateManager,
     PlutoCell cell,
     int rowIdx,
   ) {

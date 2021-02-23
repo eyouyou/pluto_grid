@@ -14,7 +14,7 @@ void main() {
 
     List<PlutoRow> rows;
 
-    PlutoGridStateManager stateManager;
+    PlutoGridController stateManager;
 
     final withEnterKeyAction = (PlutoGridEnterKeyAction enterKeyAction) {
       return PlutoWidgetTestHelper(

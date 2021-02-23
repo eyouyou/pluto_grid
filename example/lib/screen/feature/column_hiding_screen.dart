@@ -16,7 +16,7 @@ class _ColumnHidingScreenState extends State<ColumnHidingScreen> {
 
   List<PlutoRow> rows;
 
-  PlutoGridStateManager stateManager;
+  PlutoGridController stateManager;
 
   @override
   void initState() {

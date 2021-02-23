@@ -10,7 +10,7 @@ class PlutoGridMoveUpdateEvent extends PlutoGridEvent {
     this.offset,
   });
 
-  void handler(PlutoGridStateManager stateManager) {
+  void handler(PlutoGridController stateManager) {
     if (offset == null) {
       return;
     }
@@ -29,7 +29,7 @@ class PlutoGridMoveUpdateEvent extends PlutoGridEvent {
     }
   }
 
-  void _scroll(PlutoGridStateManager stateManager, PlutoMoveDirection move) {
+  void _scroll(PlutoGridController stateManager, PlutoMoveDirection move) {
     if (move == null) {
       return;
     }

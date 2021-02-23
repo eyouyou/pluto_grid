@@ -17,7 +17,7 @@ class _CellSelectionScreenState extends State<CellSelectionScreen> {
 
   List<PlutoRow> rows;
 
-  PlutoGridStateManager stateManager;
+  PlutoGridController stateManager;
 
   @override
   void initState() {

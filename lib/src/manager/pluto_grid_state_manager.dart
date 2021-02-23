@@ -46,29 +46,8 @@ class PlutoGridState extends PlutoChangeNotifier
         ScrollState,
         SelectingState {}
 
-class PlutoGridStateManager extends PlutoGridState {
-  PlutoGridStateManager({
-    @required List<PlutoColumn> columns,
-    @required List<PlutoRow> rows,
-    @required FocusNode gridFocusNode,
-    @required PlutoGridScrollController scroll,
-    PlutoGridMode mode,
-    PlutoOnChangedEventCallback onChangedEventCallback,
-    PlutoOnSelectedEventCallback onSelectedEventCallback,
-    CreateHeaderCallBack createHeader,
-    CreateFooterCallBack createFooter,
-    PlutoGridConfiguration configuration,
-  }) {
-    refColumns = FilteredList(initialList: columns);
-    refRows = FilteredList(initialList: rows);
-    setGridFocusNode(gridFocusNode);
-    setScroll(scroll);
-    setGridMode(mode);
-    setOnChanged(onChangedEventCallback);
-    setOnSelected(onSelectedEventCallback);
-    setCreateHeader(createHeader);
-    setCreateFooter(createFooter);
-    setConfiguration(configuration);
+class PlutoGridController extends PlutoGridState {
+  PlutoGridController() {
     setGridKey(GlobalKey());
   }
 

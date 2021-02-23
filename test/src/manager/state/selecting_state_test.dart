@@ -20,7 +20,7 @@ void main() {
 
         List<PlutoRow> rows = RowHelper.count(5, columns);
 
-        PlutoGridStateManager stateManager = PlutoGridStateManager(
+        PlutoGridController stateManager = PlutoGridController(
           columns: columns,
           rows: rows,
           gridFocusNode: null,
@@ -54,7 +54,7 @@ void main() {
 
         List<PlutoRow> rows = RowHelper.count(5, columns);
 
-        PlutoGridStateManager stateManager = PlutoGridStateManager(
+        PlutoGridController stateManager = PlutoGridController(
           columns: columns,
           rows: rows,
           gridFocusNode: null,
@@ -110,7 +110,7 @@ void main() {
 
       List<PlutoRow> rows = RowHelper.count(5, columns);
 
-      PlutoGridStateManager stateManager = PlutoGridStateManager(
+      PlutoGridController stateManager = PlutoGridController(
         columns: columns,
         rows: rows,
         gridFocusNode: null,
@@ -154,7 +154,7 @@ void main() {
 
       List<PlutoRow> rows = RowHelper.count(5, columns);
 
-      PlutoGridStateManager stateManager = PlutoGridStateManager(
+      PlutoGridController stateManager = PlutoGridController(
         columns: columns,
         rows: rows,
         gridFocusNode: null,
@@ -208,7 +208,7 @@ void main() {
 
       List<PlutoRow> rows = RowHelper.count(5, columns);
 
-      PlutoGridStateManager stateManager = PlutoGridStateManager(
+      PlutoGridController stateManager = PlutoGridController(
         columns: columns,
         rows: rows,
         gridFocusNode: null,
@@ -243,7 +243,7 @@ void main() {
 
       List<PlutoRow> rows = RowHelper.count(5, columns);
 
-      PlutoGridStateManager stateManager = PlutoGridStateManager(
+      PlutoGridController stateManager = PlutoGridController(
         columns: columns,
         rows: rows,
         gridFocusNode: null,
@@ -293,7 +293,7 @@ void main() {
 
       List<PlutoRow> rows = RowHelper.count(5, columns);
 
-      PlutoGridStateManager stateManager = PlutoGridStateManager(
+      PlutoGridController stateManager = PlutoGridController(
         columns: columns,
         rows: rows,
         gridFocusNode: null,
@@ -357,7 +357,7 @@ void main() {
 
       List<PlutoRow> rows = RowHelper.count(5, columns);
 
-      PlutoGridStateManager stateManager = PlutoGridStateManager(
+      PlutoGridController stateManager = PlutoGridController(
         columns: columns,
         rows: rows,
         gridFocusNode: null,
@@ -410,7 +410,7 @@ void main() {
 
       List<PlutoRow> rows = RowHelper.count(5, columns);
 
-      PlutoGridStateManager stateManager = PlutoGridStateManager(
+      PlutoGridController stateManager = PlutoGridController(
         columns: columns,
         rows: rows,
         gridFocusNode: null,
@@ -451,7 +451,7 @@ void main() {
           ...ColumnHelper.textColumn('text', count: 3, width: 150),
         ];
 
-        PlutoGridStateManager stateManager = PlutoGridStateManager(
+        PlutoGridController stateManager = PlutoGridController(
           columns: columns,
           rows: null,
           gridFocusNode: null,
@@ -482,7 +482,7 @@ void main() {
           ...ColumnHelper.textColumn('text', count: 3, width: 150),
         ];
 
-        PlutoGridStateManager stateManager = PlutoGridStateManager(
+        PlutoGridController stateManager = PlutoGridController(
           columns: columns,
           rows: null,
           gridFocusNode: null,
@@ -514,7 +514,7 @@ void main() {
           ...ColumnHelper.textColumn('text', count: 3, width: 150),
         ];
 
-        PlutoGridStateManager stateManager = PlutoGridStateManager(
+        PlutoGridController stateManager = PlutoGridController(
           columns: columns,
           rows: null,
           gridFocusNode: null,
@@ -548,7 +548,7 @@ void main() {
 
         List<PlutoRow> rows = RowHelper.count(10, columns);
 
-        PlutoGridStateManager stateManager = PlutoGridStateManager(
+        PlutoGridController stateManager = PlutoGridController(
           columns: columns,
           rows: rows,
           gridFocusNode: null,
@@ -584,7 +584,7 @@ void main() {
 
         List<PlutoRow> rows = RowHelper.count(10, columns);
 
-        PlutoGridStateManager stateManager = PlutoGridStateManager(
+        PlutoGridController stateManager = PlutoGridController(
           columns: columns,
           rows: rows,
           gridFocusNode: null,
@@ -622,7 +622,7 @@ void main() {
 
         List<PlutoRow> rows = RowHelper.count(10, columns);
 
-        PlutoGridStateManager stateManager = PlutoGridStateManager(
+        PlutoGridController stateManager = PlutoGridController(
           columns: columns,
           rows: rows,
           gridFocusNode: null,
@@ -663,7 +663,7 @@ void main() {
 
         List<PlutoRow> rows = RowHelper.count(10, columns);
 
-        PlutoGridStateManager stateManager = PlutoGridStateManager(
+        PlutoGridController stateManager = PlutoGridController(
           columns: columns,
           rows: rows,
           gridFocusNode: null,
@@ -699,7 +699,7 @@ void main() {
         ...ColumnHelper.textColumn('text', count: 3, width: 150),
       ];
 
-      PlutoGridStateManager stateManager = PlutoGridStateManager(
+      PlutoGridController stateManager = PlutoGridController(
         columns: columns,
         rows: null,
         gridFocusNode: null,
@@ -728,7 +728,7 @@ void main() {
         ...ColumnHelper.textColumn('text', count: 3, width: 150),
       ];
 
-      PlutoGridStateManager stateManager = PlutoGridStateManager(
+      PlutoGridController stateManager = PlutoGridController(
         columns: columns,
         rows: [],
         gridFocusNode: null,
@@ -761,7 +761,7 @@ void main() {
 
       List<PlutoRow> rows = RowHelper.count(5, columns);
 
-      PlutoGridStateManager stateManager = PlutoGridStateManager(
+      PlutoGridController stateManager = PlutoGridController(
         columns: columns,
         rows: rows,
         gridFocusNode: null,
@@ -795,7 +795,7 @@ void main() {
 
       List<PlutoRow> rows = RowHelper.count(5, columns);
 
-      PlutoGridStateManager stateManager = PlutoGridStateManager(
+      PlutoGridController stateManager = PlutoGridController(
         columns: columns,
         rows: rows,
         gridFocusNode: null,
@@ -830,7 +830,7 @@ void main() {
 
       List<PlutoRow> rows = RowHelper.count(5, columns);
 
-      PlutoGridStateManager stateManager = PlutoGridStateManager(
+      PlutoGridController stateManager = PlutoGridController(
         columns: columns,
         rows: rows,
         gridFocusNode: null,
@@ -864,7 +864,7 @@ void main() {
 
         List<PlutoRow> rows = RowHelper.count(5, columns);
 
-        PlutoGridStateManager stateManager = PlutoGridStateManager(
+        PlutoGridController stateManager = PlutoGridController(
           columns: columns,
           rows: rows,
           gridFocusNode: null,
@@ -911,7 +911,7 @@ void main() {
 
         List<PlutoRow> rows = RowHelper.count(5, columns);
 
-        PlutoGridStateManager stateManager = PlutoGridStateManager(
+        PlutoGridController stateManager = PlutoGridController(
           columns: columns,
           rows: rows,
           gridFocusNode: null,
@@ -947,7 +947,7 @@ void main() {
 
         List<PlutoRow> rows = RowHelper.count(5, columns);
 
-        PlutoGridStateManager stateManager = PlutoGridStateManager(
+        PlutoGridController stateManager = PlutoGridController(
           columns: columns,
           rows: rows,
           gridFocusNode: null,
@@ -976,7 +976,7 @@ void main() {
 
         List<PlutoRow> rows = RowHelper.count(5, columns);
 
-        PlutoGridStateManager stateManager = PlutoGridStateManager(
+        PlutoGridController stateManager = PlutoGridController(
           columns: columns,
           rows: rows,
           gridFocusNode: null,
@@ -1006,7 +1006,7 @@ void main() {
 
         List<PlutoRow> rows = RowHelper.count(5, columns);
 
-        PlutoGridStateManager stateManager = PlutoGridStateManager(
+        PlutoGridController stateManager = PlutoGridController(
           columns: columns,
           rows: rows,
           gridFocusNode: null,
@@ -1039,7 +1039,7 @@ void main() {
 
         List<PlutoRow> rows = RowHelper.count(5, columns);
 
-        PlutoGridStateManager stateManager = PlutoGridStateManager(
+        PlutoGridController stateManager = PlutoGridController(
           columns: columns,
           rows: rows,
           gridFocusNode: null,
@@ -1072,7 +1072,7 @@ void main() {
 
         List<PlutoRow> rows = RowHelper.count(5, columns);
 
-        PlutoGridStateManager stateManager = PlutoGridStateManager(
+        PlutoGridController stateManager = PlutoGridController(
           columns: columns,
           rows: rows,
           gridFocusNode: null,
@@ -1106,7 +1106,7 @@ void main() {
 
         List<PlutoRow> rows = RowHelper.count(5, columns);
 
-        PlutoGridStateManager stateManager = PlutoGridStateManager(
+        PlutoGridController stateManager = PlutoGridController(
           columns: columns,
           rows: rows,
           gridFocusNode: null,
@@ -1142,7 +1142,7 @@ void main() {
 
       List<PlutoRow> rows = RowHelper.count(5, columns);
 
-      PlutoGridStateManager stateManager = PlutoGridStateManager(
+      PlutoGridController stateManager = PlutoGridController(
         columns: columns,
         rows: rows,
         gridFocusNode: null,
@@ -1179,7 +1179,7 @@ void main() {
 
       List<PlutoRow> rows = RowHelper.count(5, columns);
 
-      PlutoGridStateManager stateManager = PlutoGridStateManager(
+      PlutoGridController stateManager = PlutoGridController(
         columns: columns,
         rows: rows,
         gridFocusNode: null,
@@ -1232,7 +1232,7 @@ void main() {
 
       List<PlutoRow> rows = RowHelper.count(5, columns);
 
-      PlutoGridStateManager stateManager = PlutoGridStateManager(
+      PlutoGridController stateManager = PlutoGridController(
         columns: columns,
         rows: rows,
         gridFocusNode: null,
@@ -1287,7 +1287,7 @@ void main() {
 
         List<PlutoRow> rows = RowHelper.count(5, columns);
 
-        PlutoGridStateManager stateManager = PlutoGridStateManager(
+        PlutoGridController stateManager = PlutoGridController(
           columns: columns,
           rows: rows,
           gridFocusNode: FocusNode(),
@@ -1338,7 +1338,7 @@ void main() {
 
         when(vertical.offset).thenReturn(0);
 
-        PlutoGridStateManager stateManager = PlutoGridStateManager(
+        PlutoGridController stateManager = PlutoGridController(
           columns: columns,
           rows: rows,
           gridFocusNode: FocusNode(),

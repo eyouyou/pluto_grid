@@ -80,9 +80,9 @@ mixin RowState implements IPlutoGridState {
 
   FilteredList<PlutoRow> get refRows => _refRows;
 
-  set refRows(FilteredList<PlutoRow> setRows) {
-    PlutoGridStateManager.initializeRows(refColumns.originalList, setRows);
-    _refRows = setRows;
+  set refRows(List<PlutoRow> setRows) {
+    PlutoGridController.initializeRows(refColumns.originalList, setRows);
+    _refRows = FilteredList(initialList: setRows);
   }
 
   FilteredList<PlutoRow> _refRows;
@@ -232,7 +232,7 @@ mixin RowState implements IPlutoGridState {
     if (hasSortedColumn) {
       final int sortIdx = refRows[rowIdx].sortIdx;
 
-      PlutoGridStateManager.initializeRows(
+      PlutoGridController.initializeRows(
         refColumns,
         rows,
         start: sortIdx,
@@ -248,7 +248,7 @@ mixin RowState implements IPlutoGridState {
     } else {
       _insertRows(rowIdx, rows, state: PlutoRowState.added);
 
-      PlutoGridStateManager.initializeRows(
+      PlutoGridController.initializeRows(
         refColumns,
         refRows,
         forceApplySortIdx: true,
@@ -293,7 +293,7 @@ mixin RowState implements IPlutoGridState {
             : 0) -
         rows.length;
 
-    PlutoGridStateManager.initializeRows(
+    PlutoGridController.initializeRows(
       refColumns,
       rows,
       start: start,
@@ -345,7 +345,7 @@ mixin RowState implements IPlutoGridState {
         ? refRows.map((row) => row.sortIdx ?? 0).reduce(max) + 1
         : 0;
 
-    PlutoGridStateManager.initializeRows(
+    PlutoGridController.initializeRows(
       refColumns,
       rows,
       start: start,

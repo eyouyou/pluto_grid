@@ -10,7 +10,7 @@ void main() {
 
   List<PlutoRow> rows;
 
-  PlutoGridStateManager stateManager;
+  PlutoGridController stateManager;
 
   MockOnChangeListener listener;
 
@@ -21,7 +21,7 @@ void main() {
 
     rows = RowHelper.count(10, columns);
 
-    stateManager = PlutoGridStateManager(
+    stateManager = PlutoGridController(
       columns: columns,
       rows: rows,
       gridFocusNode: null,

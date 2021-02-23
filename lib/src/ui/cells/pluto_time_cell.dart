@@ -4,7 +4,7 @@ import 'package:pluto_grid/pluto_grid.dart';
 import 'mixin_popup_cell.dart';
 
 class PlutoTimeCell extends StatefulWidget implements AbstractMixinPopupCell {
-  final PlutoGridStateManager stateManager;
+  final PlutoGridController stateManager;
   final PlutoCell cell;
   final PlutoColumn column;
 
@@ -20,7 +20,7 @@ class PlutoTimeCell extends StatefulWidget implements AbstractMixinPopupCell {
 
 class _PlutoTimeCellState extends State<PlutoTimeCell>
     with MixinPopupCell<PlutoTimeCell> {
-  PlutoGridStateManager popupStateManager;
+  PlutoGridController popupStateManager;
 
   List<PlutoColumn> popupColumns = [];
 

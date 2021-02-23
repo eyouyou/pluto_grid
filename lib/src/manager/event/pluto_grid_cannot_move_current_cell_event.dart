@@ -13,5 +13,5 @@ class PlutoGridCannotMoveCurrentCellEvent extends PlutoGridEvent {
     this.direction,
   });
 
-  void handler(PlutoGridStateManager stateManager) {}
+  void handler(PlutoGridController stateManager) {}
 }

@@ -9,7 +9,7 @@ import '../../../helper/row_helper.dart';
 import '../../../mock/mock_pluto_state_manager.dart';
 
 void main() {
-  PlutoGridStateManager stateManager;
+  PlutoGridController stateManager;
 
   setUp(() {
     stateManager = MockPlutoStateManager();

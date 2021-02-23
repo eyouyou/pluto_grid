@@ -18,7 +18,7 @@ void main() {
     ];
     final rows = RowHelper.count(10, columns);
 
-    PlutoGridStateManager stateManager;
+    PlutoGridController stateManager;
 
     // when
     await tester.pumpWidget(
@@ -93,7 +93,7 @@ void main() {
     ];
     final rows = RowHelper.count(10, columns);
 
-    PlutoGridStateManager stateManager;
+    PlutoGridController stateManager;
 
     await tester.pumpWidget(
       MaterialApp(

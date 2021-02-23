@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pluto_grid/pluto_grid.dart';
 
 class PlutoBaseCell extends PlutoStatefulWidget {
-  final PlutoGridStateManager stateManager;
+  final PlutoGridController stateManager;
   final PlutoCell cell;
   final double width;
   final double height;
@@ -232,7 +232,7 @@ class _CellContainer extends StatelessWidget {
 }
 
 class _BuildCell extends StatelessWidget {
-  final PlutoGridStateManager stateManager;
+  final PlutoGridController stateManager;
   final int rowIdx;
   final PlutoColumn column;
   final PlutoCell cell;

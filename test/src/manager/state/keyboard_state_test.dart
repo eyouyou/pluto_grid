@@ -15,7 +15,7 @@ void main() {
 
   PlutoGridScrollController scrollController;
 
-  PlutoGridStateManager stateManager;
+  PlutoGridController stateManager;
 
   final withColumnAndRows =
       PlutoWidgetTestHelper('컬럼 10개와 행 10개 인 상태에서, ', (tester) async {
@@ -29,7 +29,7 @@ void main() {
 
     when(scrollController.verticalOffset).thenReturn(100);
 
-    stateManager = PlutoGridStateManager(
+    stateManager = PlutoGridController(
       columns: columns,
       rows: rows,
       gridFocusNode: null,

@@ -192,7 +192,7 @@ class PlutoColumnRendererContext {
 
   final PlutoCell cell;
 
-  final PlutoGridStateManager stateManager;
+  final PlutoGridController stateManager;
 
   PlutoColumnRendererContext({
     this.column,

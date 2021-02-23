@@ -38,9 +38,9 @@ class PlutoDualGrid extends StatefulWidget {
 }
 
 class _PlutoDualGridState extends State<PlutoDualGrid> {
-  PlutoGridStateManager _stateManagerA;
+  PlutoGridController _stateManagerA;
 
-  PlutoGridStateManager _stateManagerB;
+  PlutoGridController _stateManagerB;
 
   Widget _buildGrid({
     PlutoDualGridProps props,

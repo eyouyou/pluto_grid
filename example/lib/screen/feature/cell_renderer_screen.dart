@@ -18,7 +18,7 @@ class _CellRendererScreenState extends State<CellRendererScreen> {
 
   List<PlutoRow> rows;
 
-  PlutoGridStateManager stateManager;
+  PlutoGridController stateManager;
 
   @override
   void initState() {

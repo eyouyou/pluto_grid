@@ -5,7 +5,7 @@ import 'package:pluto_grid/pluto_grid.dart';
 Future<PlutoGridColumnMenuItem> showColumnMenu({
   BuildContext context,
   Offset position,
-  PlutoGridStateManager stateManager,
+  PlutoGridController stateManager,
   PlutoColumn column,
 }) {
   if (position == null) {

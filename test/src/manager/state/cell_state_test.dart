@@ -23,7 +23,7 @@ void main() {
 
       List<PlutoRow> rows = RowHelper.count(10, columns);
 
-      PlutoGridStateManager stateManager = PlutoGridStateManager(
+      PlutoGridController stateManager = PlutoGridController(
         columns: columns,
         rows: rows,
         gridFocusNode: null,
@@ -51,7 +51,7 @@ void main() {
 
       List<PlutoRow> rows = RowHelper.count(10, columns);
 
-      PlutoGridStateManager stateManager = PlutoGridStateManager(
+      PlutoGridController stateManager = PlutoGridController(
         columns: columns,
         rows: rows,
         gridFocusNode: null,
@@ -84,7 +84,7 @@ void main() {
 
       List<PlutoRow> rows = RowHelper.count(10, columns);
 
-      PlutoGridStateManager stateManager = PlutoGridStateManager(
+      PlutoGridController stateManager = PlutoGridController(
         columns: columns,
         rows: rows,
         gridFocusNode: null,
@@ -122,7 +122,7 @@ void main() {
 
       List<PlutoRow> rows = RowHelper.count(10, columns);
 
-      PlutoGridStateManager stateManager = PlutoGridStateManager(
+      PlutoGridController stateManager = PlutoGridController(
         columns: columns,
         rows: rows,
         gridFocusNode: null,
@@ -162,7 +162,7 @@ void main() {
 
         List<PlutoRow> rows = RowHelper.count(10, columns);
 
-        PlutoGridStateManager stateManager = PlutoGridStateManager(
+        PlutoGridController stateManager = PlutoGridController(
           columns: columns,
           rows: rows,
           gridFocusNode: null,
@@ -203,7 +203,7 @@ void main() {
 
         List<PlutoRow> rows = RowHelper.count(10, columns);
 
-        PlutoGridStateManager stateManager = PlutoGridStateManager(
+        PlutoGridController stateManager = PlutoGridController(
           columns: columns,
           rows: rows,
           gridFocusNode: null,
@@ -253,7 +253,7 @@ void main() {
 
         List<PlutoRow> rows = RowHelper.count(10, columns);
 
-        PlutoGridStateManager stateManager = PlutoGridStateManager(
+        PlutoGridController stateManager = PlutoGridController(
           columns: columns,
           rows: rows,
           gridFocusNode: null,
@@ -305,7 +305,7 @@ void main() {
 
       List<PlutoRow> rows = RowHelper.count(10, columns);
 
-      PlutoGridStateManager stateManager = PlutoGridStateManager(
+      PlutoGridController stateManager = PlutoGridController(
         columns: columns,
         rows: rows,
         gridFocusNode: null,
@@ -327,7 +327,7 @@ void main() {
 
       List<PlutoRow> rows = RowHelper.count(10, columns);
 
-      PlutoGridStateManager stateManager = PlutoGridStateManager(
+      PlutoGridController stateManager = PlutoGridController(
         columns: columns,
         rows: rows,
         gridFocusNode: null,
@@ -353,7 +353,7 @@ void main() {
 
       List<PlutoRow> rows = RowHelper.count(10, columns);
 
-      PlutoGridStateManager stateManager = PlutoGridStateManager(
+      PlutoGridController stateManager = PlutoGridController(
         columns: columns,
         rows: rows,
         gridFocusNode: null,
@@ -382,7 +382,7 @@ void main() {
 
       List<PlutoRow> rows = RowHelper.count(10, columns);
 
-      PlutoGridStateManager stateManager = PlutoGridStateManager(
+      PlutoGridController stateManager = PlutoGridController(
         columns: columns,
         rows: rows,
         gridFocusNode: null,
@@ -420,7 +420,7 @@ void main() {
       'readonly column.'
       'should be returned false.',
       () {
-        final normalGridAndReadonlyColumn = PlutoGridStateManager(
+        final normalGridAndReadonlyColumn = PlutoGridController(
           columns: [],
           rows: [],
           gridFocusNode: null,
@@ -441,7 +441,7 @@ void main() {
       'enableEditingMode = false, '
       'should be returned false.',
       () {
-        final normalGridAndReadonlyColumn = PlutoGridStateManager(
+        final normalGridAndReadonlyColumn = PlutoGridController(
           columns: [],
           rows: [],
           gridFocusNode: null,
@@ -463,7 +463,7 @@ void main() {
       'grid mode is normal.'
       'should be returned true.',
       () {
-        final normalGridAndReadonlyColumn = PlutoGridStateManager(
+        final normalGridAndReadonlyColumn = PlutoGridController(
           columns: [],
           rows: [],
           gridFocusNode: null,
@@ -485,7 +485,7 @@ void main() {
       'grid mode is select.'
       'should be returned false.',
       () {
-        final normalGridAndReadonlyColumn = PlutoGridStateManager(
+        final normalGridAndReadonlyColumn = PlutoGridController(
           columns: [],
           rows: [],
           gridFocusNode: null,
@@ -509,7 +509,7 @@ void main() {
       'but same values.'
       'should be returned false.',
       () {
-        final normalGridAndReadonlyColumn = PlutoGridStateManager(
+        final normalGridAndReadonlyColumn = PlutoGridController(
           columns: [],
           rows: [],
           gridFocusNode: null,
@@ -544,7 +544,7 @@ void main() {
         type: PlutoColumnType.select(['one', 'two', 'three']),
       );
 
-      PlutoGridStateManager stateManager = PlutoGridStateManager(
+      PlutoGridController stateManager = PlutoGridController(
         columns: [column],
         rows: [],
         gridFocusNode: null,
@@ -578,7 +578,7 @@ void main() {
         type: PlutoColumnType.select(['one', 'two', 'three', 'four']),
       );
 
-      PlutoGridStateManager stateManager = PlutoGridStateManager(
+      PlutoGridController stateManager = PlutoGridController(
         columns: [column],
         rows: [],
         gridFocusNode: null,
@@ -612,7 +612,7 @@ void main() {
         type: PlutoColumnType.date(),
       );
 
-      PlutoGridStateManager stateManager = PlutoGridStateManager(
+      PlutoGridController stateManager = PlutoGridController(
         columns: [column],
         rows: [],
         gridFocusNode: null,
@@ -646,7 +646,7 @@ void main() {
         type: PlutoColumnType.date(),
       );
 
-      PlutoGridStateManager stateManager = PlutoGridStateManager(
+      PlutoGridController stateManager = PlutoGridController(
         columns: [column],
         rows: [],
         gridFocusNode: null,
@@ -680,7 +680,7 @@ void main() {
         type: PlutoColumnType.time(),
       );
 
-      PlutoGridStateManager stateManager = PlutoGridStateManager(
+      PlutoGridController stateManager = PlutoGridController(
         columns: [column],
         rows: [],
         gridFocusNode: null,
@@ -714,7 +714,7 @@ void main() {
         type: PlutoColumnType.time(),
       );
 
-      PlutoGridStateManager stateManager = PlutoGridStateManager(
+      PlutoGridController stateManager = PlutoGridController(
         columns: [column],
         rows: [],
         gridFocusNode: null,

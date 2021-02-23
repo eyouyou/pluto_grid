@@ -144,7 +144,7 @@ void main() {
     final columns = ColumnHelper.textColumn('header');
     final rows = RowHelper.count(3, columns);
 
-    PlutoGridStateManager stateManager;
+    PlutoGridController stateManager;
 
     // when
     await tester.pumpWidget(
@@ -227,7 +227,7 @@ void main() {
     ];
     final rows = RowHelper.count(10, columns);
 
-    PlutoGridStateManager stateManager;
+    PlutoGridController stateManager;
 
     await tester.pumpWidget(
       MaterialApp(
@@ -272,7 +272,7 @@ void main() {
     ];
     final rows = RowHelper.count(10, columns);
 
-    PlutoGridStateManager stateManager;
+    PlutoGridController stateManager;
 
     await tester.pumpWidget(
       MaterialApp(
@@ -333,7 +333,7 @@ void main() {
         PlutoRow(cells: {'header': PlutoCell(value: 12.12345)}),
       ];
 
-      PlutoGridStateManager stateManager;
+      PlutoGridController stateManager;
 
       // when
       await tester.pumpWidget(
@@ -384,7 +384,7 @@ void main() {
         PlutoRow(cells: {'header': PlutoCell(value: 12.12345)}),
       ];
 
-      PlutoGridStateManager stateManager;
+      PlutoGridController stateManager;
 
       // when
       await tester.pumpWidget(
@@ -433,7 +433,7 @@ void main() {
         PlutoRow(cells: {'header': PlutoCell(value: 1234567.123456)}),
       ];
 
-      PlutoGridStateManager stateManager;
+      PlutoGridController stateManager;
 
       // when
       await tester.pumpWidget(
@@ -482,7 +482,7 @@ void main() {
         PlutoRow(cells: {'header': PlutoCell(value: -0)}),
       ];
 
-      PlutoGridStateManager stateManager;
+      PlutoGridController stateManager;
 
       // when
       await tester.pumpWidget(
@@ -525,7 +525,7 @@ void main() {
         PlutoRow(cells: {'header0': PlutoCell(value: 'value')}),
       ];
 
-      PlutoGridStateManager stateManager;
+      PlutoGridController stateManager;
 
       // when
       await tester.pumpWidget(
@@ -568,7 +568,7 @@ void main() {
         PlutoRow(sortIdx: 9, cells: {'header0': PlutoCell(value: 'value')}),
       ];
 
-      PlutoGridStateManager stateManager;
+      PlutoGridController stateManager;
 
       // when
       await tester.pumpWidget(
@@ -608,7 +608,7 @@ void main() {
 
       List<PlutoRow> rows = RowHelper.count(10, columns);
 
-      PlutoGridStateManager stateManager;
+      PlutoGridController stateManager;
 
       // when
       await tester.pumpWidget(
@@ -646,7 +646,7 @@ void main() {
 
       List<PlutoRow> rows = RowHelper.count(10, columns);
 
-      PlutoGridStateManager stateManager;
+      PlutoGridController stateManager;
 
       // when
       await tester.pumpWidget(
@@ -693,7 +693,7 @@ void main() {
 
       List<PlutoRow> rows = RowHelper.count(10, columns);
 
-      PlutoGridStateManager stateManager;
+      PlutoGridController stateManager;
 
       // when
       await tester.pumpWidget(
@@ -753,7 +753,7 @@ void main() {
 
       List<PlutoRow> rows = RowHelper.count(10, columns);
 
-      PlutoGridStateManager stateManager;
+      PlutoGridController stateManager;
 
       // when
       await tester.pumpWidget(
@@ -819,7 +819,7 @@ void main() {
 
         List<PlutoRow> rows = RowHelper.count(10, columns);
 
-        PlutoGridStateManager stateManager;
+        PlutoGridController stateManager;
 
         // when
         await tester.pumpWidget(
@@ -900,7 +900,7 @@ void main() {
 
         List<PlutoRow> rows = RowHelper.count(10, columns);
 
-        PlutoGridStateManager stateManager;
+        PlutoGridController stateManager;
 
         // when
         await tester.pumpWidget(
@@ -986,7 +986,7 @@ void main() {
 
         List<PlutoRow> rows = RowHelper.count(10, columns);
 
-        PlutoGridStateManager stateManager;
+        PlutoGridController stateManager;
 
         // when
         await tester.pumpWidget(
@@ -1069,7 +1069,7 @@ void main() {
 
         List<PlutoRow> rows = RowHelper.count(10, columns);
 
-        PlutoGridStateManager stateManager;
+        PlutoGridController stateManager;
 
         // when
         await tester.pumpWidget(
@@ -1154,7 +1154,7 @@ void main() {
     ];
     final rows = RowHelper.count(10, columns);
 
-    PlutoGridStateManager stateManager;
+    PlutoGridController stateManager;
 
     // when
     await tester.pumpWidget(
@@ -1212,7 +1212,7 @@ void main() {
     ];
     final rows = RowHelper.count(10, columns);
 
-    PlutoGridStateManager stateManager;
+    PlutoGridController stateManager;
 
     // when
     await tester.pumpWidget(
@@ -1270,7 +1270,7 @@ void main() {
     ];
     final rows = RowHelper.count(10, columns);
 
-    PlutoGridStateManager stateManager;
+    PlutoGridController stateManager;
 
     // when
     await tester.pumpWidget(
@@ -1328,7 +1328,7 @@ void main() {
     ];
     final rows = RowHelper.count(10, columns);
 
-    PlutoGridStateManager stateManager;
+    PlutoGridController stateManager;
 
     // when
     await tester.pumpWidget(
@@ -1386,7 +1386,7 @@ void main() {
     ];
     final rows = RowHelper.count(10, columns);
 
-    PlutoGridStateManager stateManager;
+    PlutoGridController stateManager;
 
     // when
     await tester.pumpWidget(
@@ -1439,7 +1439,7 @@ void main() {
     ];
     final rows = RowHelper.count(10, columns);
 
-    PlutoGridStateManager stateManager;
+    PlutoGridController stateManager;
 
     // when
     await tester.pumpWidget(
@@ -1492,7 +1492,7 @@ void main() {
     ];
     final rows = RowHelper.count(10, columns);
 
-    PlutoGridStateManager stateManager;
+    PlutoGridController stateManager;
 
     // when
     await tester.pumpWidget(
@@ -1545,7 +1545,7 @@ void main() {
     ];
     final rows = RowHelper.count(10, columns);
 
-    PlutoGridStateManager stateManager;
+    PlutoGridController stateManager;
 
     // when
     await tester.pumpWidget(

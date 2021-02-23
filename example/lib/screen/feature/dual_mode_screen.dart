@@ -24,9 +24,9 @@ class _DualModeScreenState extends State<DualModeScreen> {
 
   List<PlutoRow> gridBRows;
 
-  PlutoGridStateManager gridAStateManager;
+  PlutoGridController gridAStateManager;
 
-  PlutoGridStateManager gridBStateManager;
+  PlutoGridController gridBStateManager;
 
   Key currentRowKey;
 

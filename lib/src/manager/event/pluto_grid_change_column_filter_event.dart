@@ -13,7 +13,7 @@ class PlutoGridChangeColumnFilterEvent extends PlutoGridEvent {
     this.filterValue,
   });
 
-  void handler(PlutoGridStateManager stateManager) {
+  void handler(PlutoGridController stateManager) {
     List<PlutoRow> foundFilterRows =
         stateManager.filterRowsByField(column.field);
 

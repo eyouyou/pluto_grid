@@ -5,7 +5,7 @@ import 'package:pluto_grid/pluto_grid.dart';
 import 'package:rxdart/rxdart.dart';
 
 class PlutoGridKeyManager {
-  PlutoGridStateManager stateManager;
+  PlutoGridController stateManager;
 
   PlutoGridKeyManager({
     this.stateManager,

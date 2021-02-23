@@ -11,7 +11,7 @@ import '../../helper/row_helper.dart';
 void main() {
   final PlutoGridSelectingMode selectingMode = PlutoGridSelectingMode.row;
 
-  PlutoGridStateManager stateManager;
+  PlutoGridController stateManager;
 
   final buildRowsWithSettingRowHeight = ({
     int numberOfRows = 10,

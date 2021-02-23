@@ -4,7 +4,7 @@ import 'package:pluto_grid/pluto_grid.dart';
 import 'mixin_popup_cell.dart';
 
 class PlutoSelectCell extends StatefulWidget implements AbstractMixinPopupCell {
-  final PlutoGridStateManager stateManager;
+  final PlutoGridController stateManager;
   final PlutoCell cell;
   final PlutoColumn column;
 

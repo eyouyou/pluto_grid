@@ -4,7 +4,7 @@ import 'package:pluto_filtered_list/pluto_filtered_list.dart';
 import 'package:pluto_grid/pluto_grid.dart';
 
 typedef SetFilterPopupHandler = void Function(
-    PlutoGridStateManager stateManager);
+    PlutoGridController stateManager);
 
 class FilterHelper {
   /// A value to identify all column searches when searching filters.
@@ -322,7 +322,7 @@ class FilterPopupState {
         assert(focusFirstFilterValue != null),
         _previousFilterRows = [...filterRows];
 
-  PlutoGridStateManager _stateManager;
+  PlutoGridController _stateManager;
   List<PlutoRow> _previousFilterRows;
 
   void onLoaded(PlutoGridOnLoadedEvent e) {
@@ -430,7 +430,7 @@ class FilterPopupState {
 }
 
 class _FilterPopupHeader extends StatelessWidget {
-  final PlutoGridStateManager stateManager;
+  final PlutoGridController stateManager;
   final PlutoGridConfiguration configuration;
   final SetFilterPopupHandler handleAddNewFilter;
 

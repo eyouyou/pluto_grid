@@ -10,7 +10,7 @@ import '../../../mock/mock_pluto_event_manager.dart';
 import '../../../mock/mock_pluto_state_manager.dart';
 
 void main() {
-  PlutoGridStateManager stateManager;
+  PlutoGridController stateManager;
   PlutoGridEventManager eventManager;
   StreamSubscription<PlutoGridEvent> streamSubscription;
 

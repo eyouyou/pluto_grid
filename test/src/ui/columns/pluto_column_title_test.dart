@@ -8,7 +8,7 @@ import '../../../helper/pluto_widget_test_helper.dart';
 import '../../../mock/mock_pluto_state_manager.dart';
 
 void main() {
-  PlutoGridStateManager stateManager;
+  PlutoGridController stateManager;
 
   setUp(() {
     stateManager = MockPlutoStateManager();

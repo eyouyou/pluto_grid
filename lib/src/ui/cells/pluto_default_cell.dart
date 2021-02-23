@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pluto_grid/pluto_grid.dart';
 
 class PlutoDefaultCell extends PlutoStatefulWidget {
-  final PlutoGridStateManager stateManager;
+  final PlutoGridController stateManager;
   final PlutoCell cell;
   final PlutoColumn column;
   final int rowIdx;
@@ -127,7 +127,7 @@ typedef DragUpdatedCallback = Function(Offset offset);
 
 class _RowDragIconWidget extends StatefulWidget {
   final PlutoColumn column;
-  final PlutoGridStateManager stateManager;
+  final PlutoGridController stateManager;
   final VoidCallback onDragStarted;
   final DragUpdatedCallback onDragUpdated;
   final DragEndCallback onDragEnd;
@@ -217,7 +217,7 @@ class __RowDragIconWidgetState extends State<_RowDragIconWidget> {
 class _CheckboxSelectionWidget extends PlutoStatefulWidget {
   final PlutoColumn column;
   final PlutoRow row;
-  final PlutoGridStateManager stateManager;
+  final PlutoGridController stateManager;
 
   _CheckboxSelectionWidget({
     this.column,
@@ -270,7 +270,7 @@ class __CheckboxSelectionWidgetState
 }
 
 class _BuildDefaultCellWidget extends StatelessWidget {
-  final PlutoGridStateManager stateManager;
+  final PlutoGridController stateManager;
   final int rowIdx;
   final PlutoRow row;
   final PlutoColumn column;

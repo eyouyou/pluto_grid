@@ -17,7 +17,7 @@ class _AddAndRemoveRowsScreenState extends State<AddAndRemoveRowsScreen> {
 
   List<PlutoRow> rows;
 
-  PlutoGridStateManager stateManager;
+  PlutoGridController stateManager;
 
   PlutoGridSelectingMode gridSelectingMode = PlutoGridSelectingMode.row;
 
@@ -110,7 +110,7 @@ class _AddAndRemoveRowsScreenState extends State<AddAndRemoveRowsScreen> {
                   DropdownButtonHideUnderline(
                     child: DropdownButton(
                       value: gridSelectingMode,
-                      items: PlutoGridStateManager.selectingModes
+                      items: PlutoGridController.selectingModes
                           .map<DropdownMenuItem<PlutoGridSelectingMode>>(
                               (PlutoGridSelectingMode item) {
                         final color =

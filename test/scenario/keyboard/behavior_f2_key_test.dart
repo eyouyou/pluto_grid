@@ -13,7 +13,7 @@ void main() {
 
     List<PlutoRow> rows;
 
-    PlutoGridStateManager stateManager;
+    PlutoGridController stateManager;
 
     final withTheCellSelected = PlutoWidgetTestHelper(
       '0, 0 셀이 선택 된 상태에서',

@@ -17,7 +17,7 @@ class _RowWithCheckboxScreenState extends State<RowWithCheckboxScreen> {
 
   List<PlutoRow> rows;
 
-  PlutoGridStateManager stateManager;
+  PlutoGridController stateManager;
 
   @override
   void initState() {

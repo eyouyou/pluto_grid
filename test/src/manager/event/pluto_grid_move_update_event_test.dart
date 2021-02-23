@@ -7,7 +7,7 @@ import '../../../mock/mock_pluto_scroll_controller.dart';
 import '../../../mock/mock_pluto_state_manager.dart';
 
 void main() {
-  PlutoGridStateManager stateManager;
+  PlutoGridController stateManager;
   PlutoGridScrollController scrollController;
   LinkedScrollControllerGroup vertical;
   LinkedScrollControllerGroup horizontal;
