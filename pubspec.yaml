@@ -16,7 +16,7 @@ dependencies:
   linked_scroll_controller: ^0.1.2
   pluto_filtered_list: ^0.1.0
   pluto_inside: ^0.1.1
-  provider: ^4.3.3
+  provider: ^5.0.0
 
 dev_dependencies:
   flutter_test:
