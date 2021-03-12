@@ -155,7 +155,7 @@ class _PlutoGridState extends State<PlutoGrid> {
     // Dispose
     disposeList.add(() {
       stateManager.removeListener(changeStateListener);
-      stateManager.dispose();
+      if (widget.controller == null) stateManager.dispose();
     });
   }
 
